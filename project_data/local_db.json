@@ -1,0 +1,41 @@
+{
+  "project-1": {
+    "name": "Test Project 1",
+    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
+    "liveLink": "https://nokia.com/",
+    "gitHubLink": "https://github.com/",
+    "img": "/logo.jpg",
+    "arrProjectOverview": [
+      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
+      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
+      "Feel free to check out the Project by visiting the Live Link. "
+    ],
+    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+  },
+  "project-2": {
+    "name": "Test Project 2",
+    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
+    "liveLink": "https://nokia.com/",
+    "gitHubLink": "https://github.com/",
+    "img": "/logo.jpg",
+    "arrProjectOverview": [
+      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
+      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
+      "Feel free to check out the Project by visiting the Live Link. "
+    ],
+    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+  },
+  "project-3": {
+    "name": "Test Project 3",
+    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
+    "liveLink": "https://nokia.com/",
+    "gitHubLink": "https://github.com/",
+    "img": "/logo.jpg",
+    "arrProjectOverview": [
+      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
+      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
+      "Feel free to check out the Project by visiting the Live Link. "
+    ],
+    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+  }
+}
