@@ -87,6 +87,13 @@ textarea {
   letter-spacing: 3px;
   text-align: center;
 }
+
+.contact__form > p {
+  text-align: center;
+    font-size: var(--chakra-fontSizes-xl);
+    font-size: 2rem;
+    font-weight: 600;
+}
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
     font-size: 4.5rem;
@@ -178,7 +185,7 @@ textarea {
   width: 92%;
 }
 
-.btn {
+.contact__form-field .chakra-form-control .btn, .btn{
   background: #fff;
   color: #333;
   text-transform: uppercase;
@@ -299,6 +306,7 @@ textarea {
 }
 .home-hero__social-icon {
   width: 100%;
+  border-radius: 5px;
 }
 .home-hero__content {
   position: absolute;
@@ -462,7 +470,7 @@ textarea {
     margin-bottom: 3rem;
   }
 }
-.contact__form-label {
+.contact__form-field .chakra-form-control .contact__form-label {
   color: #666;
   font-size: 1.4rem;
   letter-spacing: 1px;
@@ -471,7 +479,7 @@ textarea {
   display: block;
   text-align: left;
 }
-.contact__form-input {
+.contact__form-field .chakra-form-control .contact__form-input {
   color: #333;
   padding: 2rem;
   width: 100%;
@@ -523,7 +531,7 @@ textarea {
 .contact__btn {
   width: 30%;
   padding: 2rem 4rem;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
 }
 @media only screen and (max-width: 37.5em) {
   .contact__btn {
@@ -595,6 +603,7 @@ textarea {
 
 .project-details__showcase-img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .project-details__content-main {

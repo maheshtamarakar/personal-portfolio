@@ -1,41 +1,46 @@
 {
   "project-1": {
-    "name": "Test Project 1",
-    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
-    "liveLink": "https://nokia.com/",
-    "gitHubLink": "https://github.com/",
-    "img": "/logo.jpg",
+    "name": "E-Commerce Website",
+    "heading": "Angular E-Commerce Website: Development and Deploymen",
+    "liveLink": "https://celadon-capybara-83aa85.netlify.app/",
+    "gitHubLink": "https://github.com/maheshtamarakar/E-COMM-APP",
+    "img": "/gifs/ecomm.gif",
     "arrProjectOverview": [
-      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
-      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
-      "Feel free to check out the Project by visiting the Live Link. "
+      "Developed an Angular E-Commerce website using Angular, Angular RxJS, Flask, SQL, Flask-SQLAlchemy, and Bootstrap, with a focus on creating a seamless user experience.",
+      "Implemented features such as seller accounts, product management, user login and signup, cart functionality, and search using RxJS.",
+      "Designed and implemented cart functionality, allowing users to add products to their cart without logging in and transferring the data to the user’s cart when logged in, providing a seamless user experience.",
+      "Created a user-friendly UI design and optimized the UX for ease of use and efficient navigation.",
+      "Utilized SQL, PostgreSQL, and pgAdmin for database management, ensuring reliable and secure data storage.",
+      "Feel free to check out the Project by visiting the Live Link."
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+    "skills": ["Angular", "Angular RxJS","Bootstrap", "Python", "Flask", "SQL", "Flask-SQLAlchemy", "GIT"]
   },
   "project-2": {
-    "name": "Test Project 2",
-    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
-    "liveLink": "https://nokia.com/",
-    "gitHubLink": "https://github.com/",
-    "img": "/logo.jpg",
+    "name": "ReactJS Expense Tracker",
+    "heading": "Efficient Expense Tracker: Track, Analyze, and Manage Your Finances with Ease",
+    "liveLink": "https://shimmering-sprite-67d8dc.netlify.app/",
+    "gitHubLink": "https://github.com/maheshtamarakar/Expense-Tracker",
+    "img": "/gifs/expenseTracker.gif",
     "arrProjectOverview": [
-      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
-      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
+      "I have developed an expense tracker using ReactJS that allows users to effortlessly track their expenses. With this application, users can easily enter the product name, price, and date of their expenses. The expenses are then categorized according to the respective years, providing a clear overview of spending patterns.",
+      "One of the key features of this expense tracker is the visually appealing months chart bar. This chart visually represents the percentage of expenses in each month, allowing users to quickly analyze and compare their spending habits across different months.",
+      "Overall, this expense tracker showcases my expertise in ReactJS and my ability to develop practical and user-centered applications.",
       "Feel free to check out the Project by visiting the Live Link. "
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+    "skills": ["HTML", "CSS", "JavaScript", "React", "GIT"]
   },
   "project-3": {
-    "name": "Test Project 3",
-    "heading": "This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview, Tools Used and Live Links to the official product.",
-    "liveLink": "https://nokia.com/",
-    "gitHubLink": "https://github.com/",
-    "img": "/logo.jpg",
+    "name": "TodoList App",
+    "heading": "TodoList App: React.js Development with LocalStorage Integration",
+    "liveLink": "https://646272788cf1eb00542ea02b--mellow-stroopwafel-8a0493.netlify.app/",
+    "gitHubLink": "https://github.com/maheshtamarakar/todo-list-react-app",
+    "img": "/gifs/todo_app.gif",
     "arrProjectOverview": [
-      "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. ",
-      "I took User Interface ideas by visiting different types of websites of the same industry and even visited platforms like dribbble to get inspiration for building a good User Interface. ",
+      "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
+      "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
+      "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
       "Feel free to check out the Project by visiting the Live Link. "
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "React", "SASS", "GIT"]
+    "skills": ["HTML", "CSS", "JavaScript", "React", "GIT"]
   }
 }
