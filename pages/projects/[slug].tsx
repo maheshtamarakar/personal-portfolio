@@ -96,7 +96,7 @@ export async function getServerSideProps(context: { query: { slug: any; }; }) {
   try {
     const filePath = path.join('project_data', 'local_db.json');
     console.log('filePath', filePath);
-    const fs = require('fs');
+
 
 // const filePath = 'project_data/local_db.json';
 
