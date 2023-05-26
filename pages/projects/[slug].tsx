@@ -2,6 +2,7 @@ import * as fs from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+const path = require('path');
 
 export default function Page(props: { myProject: any; }) {
   const [project, setProject] = useState(props.myProject);
@@ -11,12 +12,12 @@ export default function Page(props: { myProject: any; }) {
     <>
       <section className="project-cs-hero">
         <div className="project-cs-hero__content">
-          <h1 className="heading-primary">{project.name}</h1>
+          <h1 className="heading-primary">{project?.name}</h1>
           <div className="project-cs-hero__info">
-            <p className="text-primary">{project.heading}</p>
+            <p className="text-primary">{project?.heading}</p>
           </div>
           <div className="project-cs-hero__cta">
-            <Link href={`${project.liveLink}`} className="btn btn--bg" target="_blank">
+            <Link href={`${project?.liveLink}`} className="btn btn--bg" target="_blank">
               Live Link
             </Link>
           </div>
@@ -32,7 +33,7 @@ export default function Page(props: { myProject: any; }) {
                 className="project-details__showcase-img"
               /> */}
               <Image
-                src={`${project.img}`}
+                src={`${project?.img}`}
                 alt="Project Image"
                 width={500}
                 height={500}
@@ -45,7 +46,7 @@ export default function Page(props: { myProject: any; }) {
                 <h3 className="project-details__content-title">
                   Project Overview
                 </h3>
-                {project.arrProjectOverview.map((overview: string, index: number) => {
+                {project?.arrProjectOverview.map((overview: string, index: number) => {
                   return (
                     <p key={index} className="project-details__desc-para">
                       {overview}
@@ -56,7 +57,7 @@ export default function Page(props: { myProject: any; }) {
               <div className="project-details__tools-used">
                 <h3 className="project-details__content-title">Tools Used</h3>
                 <div className="skills">
-                  {project.skills.map((skill: string, index: number) => {
+                  {project?.skills.map((skill: string, index: number) => {
                     return (
                       <div key={index} className="skills__skill">
                         {skill}
@@ -68,14 +69,14 @@ export default function Page(props: { myProject: any; }) {
               <div className="project-details__links">
                 <h3 className="project-details__content-title">See Live</h3>
                 <Link
-                  href={`${project.liveLink}`}
+                  href={`${project?.liveLink}`}
                   className="btn btn--med btn--theme project-details__links-btn"
                   target="_blank"
                 >
                   Live Link
                 </Link>
                 <Link
-                  href={`${project.gitHubLink}`}
+                  href={`${project?.gitHubLink}`}
                   className="btn btn--med btn--theme-inv project-details__links-btn"
                   target="_blank"
                 >
@@ -93,8 +94,11 @@ export default function Page(props: { myProject: any; }) {
 // This gets called on every request
 export async function getServerSideProps(context: { query: { slug: any; }; }) {
   try {
+    const filePath = path.join('project_data', 'local_db.json');
+    console.log('filePath', filePath);
+    
     const data = await fs.promises.readFile(
-      "../../project_data/local_db.json",
+      filePath,
       "utf-8"
     );
     const { slug } = context.query;
