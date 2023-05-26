@@ -94,7 +94,7 @@ export default function Page(props: { myProject: any; }) {
 export async function getServerSideProps(context: { query: { slug: any; }; }) {
   try {
     const data = await fs.promises.readFile(
-      "project_data/local_db.json",
+      "../../project_data/local_db.json",
       "utf-8"
     );
     const { slug } = context.query;
