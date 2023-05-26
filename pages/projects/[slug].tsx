@@ -96,7 +96,19 @@ export async function getServerSideProps(context: { query: { slug: any; }; }) {
   try {
     const filePath = path.join('project_data', 'local_db.json');
     console.log('filePath', filePath);
-    
+    const fs = require('fs');
+
+// const filePath = 'project_data/local_db.json';
+
+fs.access(filePath, fs.constants.F_OK | fs.constants.R_OK, (err) => {
+  if (err) {
+    // File does not exist or is not readable
+    console.error('File does not exist or is not readable.');
+  } else {
+    // File exists and is readable
+    console.log('File exists and is readable.');
+  }
+});
     const data = await fs.promises.readFile(
       filePath,
       "utf-8"
