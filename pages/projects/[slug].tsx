@@ -94,15 +94,19 @@ export default function Page(props: { myProject: any; }) {
 // This gets called on every request
 export async function getServerSideProps(context: { query: { slug: any; }; }) {
   try {
-    const filePath = path.join('project_data', 'local_db.json');
-    console.log('filePath', filePath);
-    
-    const data = await fs.promises.readFile(
-      filePath,
-      "utf-8"
-    );
+    // const filePath = path.join('project_data', 'local_db.json');
+
+    // const data = await fs.promises.readFile(
+    //   filePath,
+    //   "utf-8"
+    // );
+    const response = await fetch('https://personal-portfolio-phi-dusky.vercel.app/api/project_data')
+    let data = await response.json()
     const { slug } = context.query;
-    const myProject = await JSON.parse(data)[slug];
+    // const myProject = await JSON.parse(data)[slug];
+    const myProject = data[slug];
+    // console.log('myProject', myProject);
+    
     return { props: { myProject } };
   } catch (err) {
     console.log(err);
