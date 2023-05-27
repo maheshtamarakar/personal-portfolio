@@ -2,9 +2,9 @@ import * as fs from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-const path = require('path');
+const path = require("path");
 
-export default function Page(props: { myProject: any; }) {
+export default function Page(props: { myProject: any }) {
   const [project, setProject] = useState(props.myProject);
   // const router = useRouter();
   // const slug = router.query.slug;
@@ -17,7 +17,11 @@ export default function Page(props: { myProject: any; }) {
             <p className="text-primary">{project?.heading}</p>
           </div>
           <div className="project-cs-hero__cta">
-            <Link href={`${project?.liveLink}`} className="btn btn--bg" target="_blank">
+            <Link
+              href={`${project?.liveLink}`}
+              className="btn btn--bg"
+              target="_blank"
+            >
               Live Link
             </Link>
           </div>
@@ -46,13 +50,15 @@ export default function Page(props: { myProject: any; }) {
                 <h3 className="project-details__content-title">
                   Project Overview
                 </h3>
-                {project?.arrProjectOverview.map((overview: string, index: number) => {
-                  return (
-                    <p key={index} className="project-details__desc-para">
-                      {overview}
-                    </p>
-                  );
-                })}
+                {project?.arrProjectOverview.map(
+                  (overview: string, index: number) => {
+                    return (
+                      <p key={index} className="project-details__desc-para">
+                        {overview}
+                      </p>
+                    );
+                  }
+                )}
               </div>
               <div className="project-details__tools-used">
                 <h3 className="project-details__content-title">Tools Used</h3>
@@ -92,7 +98,7 @@ export default function Page(props: { myProject: any; }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(context: { query: { slug: any; }; }) {
+export async function getServerSideProps(context: { query: { slug: any } }) {
   try {
     // const filePath = path.join('project_data', 'local_db.json');
 
@@ -100,13 +106,13 @@ export async function getServerSideProps(context: { query: { slug: any; }; }) {
     //   filePath,
     //   "utf-8"
     // );
-    const response = await fetch('https://personal-portfolio-phi-dusky.vercel.app/api/project_data')
-    let data = await response.json()
+    const response = await fetch("https://personal-portfolio-phi-dusky.vercel.app/api/project_data");
+    let data = await response.json();
     const { slug } = context.query;
     // const myProject = await JSON.parse(data)[slug];
     const myProject = data[slug];
     // console.log('myProject', myProject);
-    
+
     return { props: { myProject } };
   } catch (err) {
     console.log(err);
