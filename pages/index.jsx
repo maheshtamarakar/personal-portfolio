@@ -187,9 +187,9 @@ export default function Home() {
                   Hey! It&apos;s <strong>Mahesh Tamatta</strong>, I&apos;m a{" "}
                   <strong> Full Stack Developer with 1 year </strong> of
                   experience in Predigle. In my current position, I developed
-                  scalable components using Angular, TypeScript and Python, and
+                  scalable components using Angular, TypeScript,Python and
                   created reports that provided valuable insights into marketing
-                  campaign analytics..
+                  campaign analytics.
                 </p>
                 <p className="about__content-details-para">
                   Check out some of my work in the <strong>Projects </strong>{" "}
@@ -198,8 +198,7 @@ export default function Home() {
                 <p className="about__content-details-para">
                   I&apos;m open to <strong>Job</strong> opportunities where I
                   can contribute, learn and grow. If you have a good opportunity
-                  that matches my skills and experience then don&apos;t hesitate
-                  to <strong>contact</strong> me.
+                  that matches my skills and experience then please <strong>contact</strong> me.
                 </p>
               </div>
               <a
@@ -335,7 +334,7 @@ export default function Home() {
               Contact
             </span>
             <span className="heading-sec__sub heading-sec__sub--lt">
-              Feel free to Contact me by submitting the form below and I will
+              Please Contact me by submitting the form below and I will
               get back to you as soon as possible
             </span>
           </h2>
