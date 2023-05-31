@@ -108,7 +108,7 @@ export async function getServerSideProps(context: { query: { slug: any } }) {
     // );
     let local_host = "http://localhost:3000/";
     let prod_host = "https://personal-portfolio-phi-dusky.vercel.app"
-    const response = await fetch(`${local_host}/api/project_data`);
+    const response = await fetch(`${prod_host}/api/project_data`);
     let data = await response.json();
     const { slug } = context.query;
     // const myProject = await JSON.parse(data)[slug];
