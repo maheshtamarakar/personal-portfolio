@@ -886,10 +886,10 @@ textarea {
   flex-wrap: wrap;
 }
 .skills__skill {
-  padding: 1rem 2rem;
+  padding: 10px;
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   background: rgba(153, 153, 153, 0.2);
   border-radius: 5px;
   font-weight: 600;
@@ -930,5 +930,12 @@ textarea {
   to {
     opacity: 0;
     top: 27px;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .project-details__links > a {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

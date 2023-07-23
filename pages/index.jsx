@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
 import { sendContactForm } from "../lib/api";
+import Projects  from "../components/projects/Projects"
 import {
   Button,
   FormControl,
@@ -229,103 +230,7 @@ export default function Home() {
         </div>
       </section>
       <section id="projects" className="projects sec-pad">
-        <div className="main-container">
-          <h2 className="heading heading-sec heading-sec__mb-bg">
-            <span className="heading-sec__main">Projects</span>
-            <span className="heading-sec__sub">
-              Here you will find some of the personal projects that I created
-              with each project containing its own case study
-            </span>
-          </h2>
-
-          <div className="projects__content">
-            <div className="projects__row">
-              <div className="projects__row-img-cont">
-                <Image
-                  src="/gifs/ecomm.gif"
-                  alt="icon"
-                  width={500}
-                  height={500}
-                  quality={100}
-                  className="home-hero__social-icon"
-                />
-              </div>
-              <div className="projects__row-content">
-                <h3 className="projects__row-content-title">
-                  E-Commerce Website
-                </h3>
-                <p className="projects__row-content-desc">
-                  Developed an Angular E-Commerce website using Angular, Angular
-                  RxJS, Flask, SQL, Flask-SQLAlchemy, and Bootstrap, with a
-                  focus on creating a seamless user experience.
-                </p>
-                <Link
-                  href="/projects/project-1"
-                  target="_blank"
-                  className="btn btn--med btn--theme dynamicBgClr"
-                >
-                  Case Study
-                </Link>
-              </div>
-            </div>
-            <div className="projects__row">
-              <div className="projects__row-img-cont">
-                <Image
-                  src="/gifs/expenseTracker.gif"
-                  alt="icon"
-                  width={500}
-                  height={500}
-                  quality={100}
-                  className="home-hero__social-icon"
-                />
-              </div>
-              <div className="projects__row-content">
-                <h3 className="projects__row-content-title">
-                  ReactJS Expense Tracker
-                </h3>
-                <p className="projects__row-content-desc">
-                  Effortlessly track and categorize expenses with the ReactJS
-                  Expense Tracker, gaining valuable insights and achieving
-                  financial control. Simplify your financial management, make
-                  informed decisions, and reach your financial goals seamlessly.
-                </p>
-                <Link
-                  href="/projects/project-2"
-                  className="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                >
-                  Case Study
-                </Link>
-              </div>
-            </div>
-            <div className="projects__row">
-              <div className="projects__row-img-cont">
-                <Image
-                  src="/gifs/todo_app.gif"
-                  alt="icon"
-                  width={500}
-                  height={500}
-                  quality={100}
-                  className="home-hero__social-icon"
-                />
-              </div>
-              <div className="projects__row-content">
-                <h3 className="projects__row-content-title">TodoList App</h3>
-                <p className="projects__row-content-desc">
-                  TodoList App: React.js Development with LocalStorage
-                  Integration
-                </p>
-                <Link
-                  href="/projects/project-3"
-                  className="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                >
-                  Case Study
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Projects />
       </section>
       <section id="contact" className="contact sec-pad dynamicBg">
         <div className="main-container">

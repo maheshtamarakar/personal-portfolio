@@ -30,17 +30,17 @@
     "skills": ["HTML", "CSS", "JavaScript", "React", "GIT"]
   },
   "project-3": {
-    "name": "TodoList App",
-    "heading": "TodoList App: React.js Development with LocalStorage Integration",
-    "liveLink": "https://646272788cf1eb00542ea02b--mellow-stroopwafel-8a0493.netlify.app/",
-    "gitHubLink": "https://github.com/maheshtamarakar/todo-list-react-app",
-    "img": "/gifs/todo_app.gif",
+    "name": "Live Dinner Restaurant",
+    "heading": "A responsive LiveDinnerRestaurant website to test my HTML5, CSS3, JavaScript",
+    "liveLink": "https://maheshtamarakar.github.io/liverestaurant1/",
+    "gitHubLink": "https://github.com/maheshtamarakar/liverestaurant1",
+    "img": "/food_restaurant.png",
     "arrProjectOverview": [
       "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
       "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
       "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
       "Feel free to check out the Project by visiting the Live Link. "
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "React", "GIT"]
+    "skills": ["HTML", "CSS", "JavaScript"]
   }
 }
