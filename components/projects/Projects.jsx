@@ -22,6 +22,21 @@ const Projects = () => {
           id:1
         },
         {
+          name: "Movix",
+          heading: "A responsive LiveDinnerRestaurant website to test my HTML5, CSS3, JavaScript",
+          liveLink: "https://movix-topaz-nine.vercel.app/",
+          gitHubLink: "https://github.com/maheshtamarakar/MOVIX",
+          img: "/food_restaurant.png",
+          arrProjectOverview: [
+            "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
+            "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
+            "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
+            "Feel free to check out the Project by visiting the Live Link. "
+          ],
+          skills: ["HTML", "CSS", "JavaScript"],
+          id:2
+        },
+        {
           name: "ReactJS Expense Tracker",
           heading: "Efficient Expense Tracker: Track, Analyze, and Manage Your Finances with Ease",
           liveLink: "https://shimmering-sprite-67d8dc.netlify.app/",
@@ -34,24 +49,9 @@ const Projects = () => {
             "Feel free to check out the Project by visiting the Live Link. "
           ],
           skills: ["HTML", "CSS", "JavaScript", "React", "GIT"],
-          id:2          
+          id:3         
 
         },
-        {
-          name: "Live Dinner Restaurant",
-          heading: "A responsive LiveDinnerRestaurant website to test my HTML5, CSS3, JavaScript",
-          liveLink: "https://maheshtamarakar.github.io/liverestaurant1/",
-          gitHubLink: "https://github.com/maheshtamarakar/liverestaurant1",
-          img: "/food_restaurant.png",
-          arrProjectOverview: [
-            "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
-            "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
-            "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
-            "Feel free to check out the Project by visiting the Live Link. "
-          ],
-          skills: ["HTML", "CSS", "JavaScript"],
-          id:3
-        }
     ]
 
   return (
@@ -86,7 +86,7 @@ const Projects = () => {
                   <div className="skills">
                   {project?.skills.map((skill, index) => {
                     return (
-                      <div key={index} className="skills__skill">
+                      <div key={index} className="skills__skill project_skills">
                         {skill}
                       </div>
                     );
