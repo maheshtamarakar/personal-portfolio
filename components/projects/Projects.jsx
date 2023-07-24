@@ -5,11 +5,11 @@ import React from "react";
 const Projects = () => {
     let projects_data = [
         {
-          name: "E-Commerce Website",
-          heading: "Angular E-Commerce Website: Development and Deploymen",
+          name: "Full-stack: E-Commerce Website",
+          heading: "An online ecommerce website which supports very user friendly adding products to cart till making a purchase, here you can add your products using seller login, I have user and seller login both",
           liveLink: "https://animewear.netlify.app/",
           gitHubLink: "https://github.com/maheshtamarakar/E-COMM-APP",
-          img: "/gifs/ecomm.gif",
+          img: "/img/animeWear.png",
           arrProjectOverview: [
             "Developed an Angular E-Commerce website using Angular, Angular RxJS, Flask, SQL, Flask-SQLAlchemy, and Bootstrap, with a focus on creating a seamless user experience.",
             "Implemented features such as seller accounts, product management, user login and signup, cart functionality, and search using RxJS.",
@@ -23,17 +23,17 @@ const Projects = () => {
         },
         {
           name: "Movix",
-          heading: "A responsive LiveDinnerRestaurant website to test my HTML5, CSS3, JavaScript",
+          heading: "An professional looking movie review website which helps you find your next movie to watch, it will tell you trending, popular, high-rated movies",
           liveLink: "https://movix-topaz-nine.vercel.app/",
           gitHubLink: "https://github.com/maheshtamarakar/MOVIX",
-          img: "/food_restaurant.png",
+          img: "/img/movix.png",
           arrProjectOverview: [
             "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
             "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
             "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
             "Feel free to check out the Project by visiting the Live Link. "
           ],
-          skills: ["HTML", "CSS", "JavaScript"],
+          skills: ["HTML", "SCSS", "JavaScript", "Reactjs", "Infinite Scrolling", "Searching Filter", "Image Lazy Loading"],
           id:2
         },
         {
