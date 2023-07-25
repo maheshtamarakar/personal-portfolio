@@ -90,9 +90,9 @@ textarea {
 
 .contact__form > p {
   text-align: center;
-    font-size: var(--chakra-fontSizes-xl);
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: var(--chakra-fontSizes-xl);
+  font-size: 2rem;
+  font-weight: 600;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
@@ -185,7 +185,8 @@ textarea {
   width: 92%;
 }
 
-.contact__form-field .chakra-form-control .btn, .btn{
+.contact__form-field .chakra-form-control .btn,
+.btn {
   background: #fff;
   color: #333;
   text-transform: uppercase;
@@ -217,7 +218,7 @@ textarea {
   background: #fff;
   border: 2px solid #0062b9;
   box-shadow: none;
-  padding: calc(1.5rem - 2px) calc(5rem - 2px);
+  /* padding: calc(1.5rem - 2px) calc(5rem - 2px); */
 }
 
 .sec-pad {
@@ -643,14 +644,27 @@ textarea {
 
 .project-details__links {
   margin: 0 0;
+  font-size: 1rem;
+  width: 100%;
 }
+
+.project-details__links > a:first-child {
+  float: left;
+  margin: 0;
+}
+
+.project-details__links > a:nth-child(2) {
+  float: left;
+  margin-left: 1rem;
+}
+
 .project-details__links-btn {
   margin-right: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .project-details__links-btn {
     margin-right: 0;
-    width: 70%;
+    width: 34%;
     margin-bottom: 2rem;
     text-align: center;
   }
