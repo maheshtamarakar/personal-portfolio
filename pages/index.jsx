@@ -186,11 +186,12 @@ export default function Home() {
               <div className="about__content-details">
                 <p className="about__content-details-para">
                   Hey! It&apos;s <strong>Mahesh Tamatta</strong>, I&apos;m a{" "}
-                  <strong> Full Stack Developer with 1 year </strong> of
-                  experience in Predigle. In my current position, I developed
-                  scalable components using Angular, TypeScript,Python and
-                  created reports that provided valuable insights into marketing
-                  campaign analytics.
+                  <strong> Full Stack Developer with 2+ year </strong> of
+                  experience in Predigle. I'm a Full Stack Developer with 2+ year of experience in Predigle. 
+                  I have a strong background in Angular, Nextjs, Reactjs, TypeScript, Tailwind CSS, Nestjs, 
+                  Stripe payment, webhooks, Strapi, Python, Flask, SQL, and PostgreSQL, Jira, Git. In my current position, 
+                  I developed scalable components using TypeScript, JavaScript, and Python, and created reports that provided 
+                  valuable insights into marketing campaign analytics.
                 </p>
                 <p className="about__content-details-para">
                   Check out some of my work in the <strong>Projects </strong>{" "}
