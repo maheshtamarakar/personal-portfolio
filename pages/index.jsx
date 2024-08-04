@@ -77,7 +77,7 @@ export default function Home() {
     <>
       <section className="home-hero">
         <div className="home-hero__content">
-          <h1 className="heading-primary">Hey, I&apos;m Mahesh Tamatta</h1>
+          <h1 className="heading-primary">Hey, I'm Mahesh Tamatta</h1>
           <div className="home-hero__info">
             <p className="text-primary">
             Full Stack Developer Specializing in Frontend Development for Successful Websites and Web Applications
@@ -185,7 +185,7 @@ export default function Home() {
               <h3 className="about__content-title">Get to know me!</h3>
               <div className="about__content-details">
                 <p className="about__content-details-para">
-                  Hey! It&apos;s <strong>Mahesh Tamatta</strong>, I&apos;m a{" "}
+                  Hey! It's <strong>Mahesh Tamatta</strong>, I'm a{" "}
                   <strong> Full Stack Developer with 2+ year </strong> of
                   experience in Predigle. I'm a Full Stack Developer with 2+ year of experience in Predigle. 
                   I have a strong background in Angular, Nextjs, Reactjs, TypeScript, Tailwind CSS, Nestjs, 
@@ -198,7 +198,7 @@ export default function Home() {
                   section.
                 </p>
                 <p className="about__content-details-para">
-                  I&apos;m open to <strong>Job</strong> opportunities where I
+                  I'm open to <strong>Job</strong> opportunities where I
                   can contribute, learn and grow. If you have a good opportunity
                   that matches my skills and experience then please <strong>contact</strong> me.
                 </p>
