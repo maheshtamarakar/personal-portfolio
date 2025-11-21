@@ -77,7 +77,7 @@ export default function Home() {
     <>
       <section className="home-hero">
         <div className="home-hero__content">
-          <h1 className="heading-primary">Hey, I'm Mahesh Tamatta</h1>
+          <h1 className="heading-primary">Hey, I&apos;m Mahesh Tamatta</h1>
           <div className="home-hero__info">
             <p className="text-primary">
             Full Stack Developer Specializing in Frontend Development for Successful Websites and Web Applications
@@ -138,7 +138,7 @@ export default function Home() {
               />
             </a>
           </div>
-          <div className="home-hero__social">
+          {/* <div className="home-hero__social">
             <a
               href="https://www.youtube.com/channel/UCb1CEVqGiKi7oCZTGfjmhWQ"
               target="_blank"
@@ -153,7 +153,7 @@ export default function Home() {
                 className="home-hero__social-icon"
               />
             </a>
-          </div>
+          </div> */}
           {/* <div className="home-hero__social">
             <a
               href="#"
@@ -185,20 +185,16 @@ export default function Home() {
               <h3 className="about__content-title">Get to know me!</h3>
               <div className="about__content-details">
                 <p className="about__content-details-para">
-                  Hey! It's <strong>Mahesh Tamatta</strong>, I'm a{" "}
-                  <strong> Full Stack Developer with 2+ year </strong> of
-                  experience in Predigle. I'm a Full Stack Developer with 2+ year of experience in Predigle. 
-                  I have a strong background in Angular, Nextjs, Reactjs, TypeScript, Tailwind CSS, Nestjs, 
-                  Stripe payment, webhooks, Strapi, Python, Flask, SQL, and PostgreSQL, Jira, Git. In my current position, 
-                  I developed scalable components using TypeScript, JavaScript, and Python, and created reports that provided 
-                  valuable insights into marketing campaign analytics.
+                  Hey! It&apos;s <strong>Mahesh Tamatta</strong>, Experienced <strong>Full Stack Developer</strong> with hands-on product development experience building scalable, high-performance web applications using Angular, React.js, Redux, Next.js (exposure), TypeScript, and modern JavaScript ecosystems.
+                Strong in component-driven architecture, reusable UI systems, performance optimization, state management, and cross-functional collaboration. Experienced in Agile workflows, CI/CD, code reviews, and writing unit tests with Jasmine/Karma.
+
                 </p>
                 <p className="about__content-details-para">
                   Check out some of my work in the <strong>Projects </strong>{" "}
                   section.
                 </p>
                 <p className="about__content-details-para">
-                  I'm open to <strong>Job</strong> opportunities where I
+                  I&apos;m open to <strong>Job</strong> opportunities where I
                   can contribute, learn and grow. If you have a good opportunity
                   that matches my skills and experience then please <strong>contact</strong> me.
                 </p>
@@ -214,17 +210,29 @@ export default function Home() {
               <h3 className="about__content-title">My Skills</h3>
               <div className="skills">
                 <div className="skills__skill">Angular</div>
-                <div className="skills__skill">Next.js</div>
                 <div className="skills__skill">React</div>
+                <div className="skills__skill">Redux</div>
+                <div className="skills__skill">React Hooks</div>
+                <div className="skills__skill">Context API</div>
                 <div className="skills__skill">TypeScript</div>
+                <div className="skills__skill">JavaScript (ES6+)</div>
+                <div className="skills__skill">Next.js</div>
                 <div className="skills__skill">Tailwind CSS</div>
+                <div className="skills__skill">Bootstrap</div>
                 <div className="skills__skill">Node.js</div>
-                <div className="skills__skill">Python</div>
-                <div className="skills__skill">Flask</div>
-                <div className="skills__skill">SQL</div>
-                <div className="skills__skill">SqlAlchemy</div>
-                <div className="skills__skill">Jira</div>
+                <div className="skills__skill">Express.js</div>
+                <div className="skills__skill">REST APIs</div>
+                <div className="skills__skill">MongoDB</div>
+                <div className="skills__skill">Jasmine</div>
+                <div className="skills__skill">Karma</div>
                 <div className="skills__skill">Git</div>
+                <div className="skills__skill">GitHub</div>
+                <div className="skills__skill">Postman</div>
+                <div className="skills__skill">VS Code</div>
+                <div className="skills__skill">Jira</div>
+                <div className="skills__skill">Storybook </div>
+                <div className="skills__skill">CI/CD (exposure)</div>
+                <div className="skills__skill">Agile/Scrum</div>
               </div>
             </div>
           </div>

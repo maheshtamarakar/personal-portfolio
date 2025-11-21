@@ -397,6 +397,9 @@ textarea {
 }
 .projects__row-img-cont {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects__row-img {
   width: 100%;
