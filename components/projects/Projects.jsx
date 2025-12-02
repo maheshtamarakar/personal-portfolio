@@ -25,7 +25,7 @@ const Projects = () => {
       name: "Reusable Frontend Component Library",
       heading:
         "Developed responsive and accessible components (tables, modals, sidebars, auto-complete), Implemented GitHub Actions CI/CD for automated npm publishing and documentation update, reduced duplicate UI code by 40% and improved Agile delivery speed",
-      liveLink: "https://storybook.predigle.com/",
+      // liveLink: "https://storybook.predigle.com/",
       // gitHubLink: "https://github.com/maheshtamarakar/E-COMM-APP",
       img: "/img/image.png",
       arrProjectOverview: [],
