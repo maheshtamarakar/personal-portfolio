@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { sendContactForm } from "../lib/api";
 import Projects  from "../components/projects/Projects"
+import Experience from "../components/experience/Experience"
 import {
   Button,
   FormControl,
@@ -80,19 +81,26 @@ export default function Home() {
           <h1 className="heading-primary">Hey, I&apos;m Mahesh Tamatta</h1>
           <div className="home-hero__info">
             <p className="text-primary">
-            Full Stack Developer Specializing in Frontend Development for Successful Websites and Web Applications
+              Frontend Developer | React.js | TypeScript | Redux | Component
+              Libraries | Accessibility
+            </p>
+            <p className="text-primary home-hero__location">
+              Mumbai, Maharashtra, India
             </p>
           </div>
           <div className="home-hero__cta">
             <a href="./#projects" className="btn btn--bg">
               Projects
             </a>
+            <a href="/resume.pdf" download className="btn btn--bg btn--theme-inv home-hero__resume-btn">
+              Download Resume
+            </a>
           </div>
         </div>
         <div className="home-hero__socials">
           <div className="home-hero__social">
             <a
-              href="https://www.linkedin.com/in/mahesh-tamrakar-7095951b7/"
+              href="https://www.linkedin.com/in/mahesh-tamatta-7095951b7/"
               target="_blank"
               className="home-hero__social-icon-link"
             >
@@ -185,13 +193,25 @@ export default function Home() {
               <h3 className="about__content-title">Get to know me!</h3>
               <div className="about__content-details">
                 <p className="about__content-details-para">
-                  Hey! It&apos;s <strong>Mahesh Tamatta</strong>, Experienced <strong>Full Stack Developer</strong> with hands-on product development experience building scalable, high-performance web applications using Angular, React.js, Redux, Next.js (exposure), TypeScript, and modern JavaScript ecosystems.
-                Strong in component-driven architecture, reusable UI systems, performance optimization, state management, and cross-functional collaboration. Experienced in Agile workflows, CI/CD, code reviews, and writing unit tests with Jasmine/Karma.
-
+                  Hey! It&apos;s <strong>Mahesh Tamatta</strong>, a <strong>Frontend Developer</strong> with 4.6
+                  years of experience building production React applications
+                  across fintech, healthcare and e-commerce. I lead frontend
+                  architecture for an MSME lending platform at{" "}
+                  <strong>Canopi</strong>, and previously led a 4-person team
+                  at <strong>Predigle</strong> that built a company-wide
+                  Storybook component library, cutting duplicate UI code by
+                  40%.
                 </p>
                 <p className="about__content-details-para">
-                  Check out some of my work in the <strong>Projects </strong>{" "}
-                  section.
+                  I focus on performance, accessibility (WCAG) and
+                  design-system consistency, with hands-on Node.js/MongoDB and
+                  LLM/RAG integration experience. Check out some of my work in
+                  the <strong>Experience</strong> and <strong>Projects</strong>{" "}
+                  sections below.
+                </p>
+                <p className="about__content-details-para">
+                  <strong>Education:</strong> B.E. Mechanical Engineering,
+                  Terna Engineering College, Mumbai (2018 &ndash; 2022).
                 </p>
                 <p className="about__content-details-para">
                   I&apos;m open to <strong>Job</strong> opportunities where I
@@ -208,36 +228,75 @@ export default function Home() {
             </div>
             <div className="about__content-skills">
               <h3 className="about__content-title">My Skills</h3>
-              <div className="skills">
-                <div className="skills__skill">Angular</div>
-                <div className="skills__skill">React</div>
-                <div className="skills__skill">Redux</div>
-                <div className="skills__skill">React Hooks</div>
-                <div className="skills__skill">Context API</div>
-                <div className="skills__skill">TypeScript</div>
-                <div className="skills__skill">JavaScript (ES6+)</div>
-                <div className="skills__skill">Next.js</div>
-                <div className="skills__skill">Tailwind CSS</div>
-                <div className="skills__skill">Bootstrap</div>
-                <div className="skills__skill">Node.js</div>
-                <div className="skills__skill">Express.js</div>
-                <div className="skills__skill">REST APIs</div>
-                <div className="skills__skill">MongoDB</div>
-                <div className="skills__skill">Jasmine</div>
-                <div className="skills__skill">Karma</div>
-                <div className="skills__skill">Git</div>
-                <div className="skills__skill">GitHub</div>
-                <div className="skills__skill">Postman</div>
-                <div className="skills__skill">VS Code</div>
-                <div className="skills__skill">Jira</div>
-                <div className="skills__skill">Storybook </div>
-                <div className="skills__skill">CI/CD (exposure)</div>
-                <div className="skills__skill">Agile/Scrum</div>
+              <div className="skills__groups">
+                <div className="skills__group">
+                  <h4 className="skills__group-title">Core</h4>
+                  <div className="skills">
+                    <div className="skills__skill">React.js</div>
+                    <div className="skills__skill">TypeScript</div>
+                    <div className="skills__skill">JavaScript (ES6+)</div>
+                    <div className="skills__skill">Redux</div>
+                    <div className="skills__skill">Context API</div>
+                    <div className="skills__skill">React Hooks</div>
+                    <div className="skills__skill">Next.js</div>
+                    <div className="skills__skill">State Management</div>
+                    <div className="skills__skill">Component Architecture</div>
+                  </div>
+                </div>
+                <div className="skills__group">
+                  <h4 className="skills__group-title">UI &amp; Design Systems</h4>
+                  <div className="skills">
+                    <div className="skills__skill">Storybook</div>
+                    <div className="skills__skill">HTML5</div>
+                    <div className="skills__skill">CSS3</div>
+                    <div className="skills__skill">SCSS</div>
+                    <div className="skills__skill">Tailwind CSS</div>
+                    <div className="skills__skill">Material UI</div>
+                    <div className="skills__skill">Responsive Design</div>
+                    <div className="skills__skill">Accessibility (WCAG)</div>
+                    <div className="skills__skill">Cross-Browser Compatibility</div>
+                  </div>
+                </div>
+                <div className="skills__group">
+                  <h4 className="skills__group-title">Performance &amp; Data</h4>
+                  <div className="skills">
+                    <div className="skills__skill">Performance Optimization</div>
+                    <div className="skills__skill">Infinite Scroll</div>
+                    <div className="skills__skill">Pagination</div>
+                    <div className="skills__skill">REST API Integration</div>
+                    <div className="skills__skill">Error Handling</div>
+                    <div className="skills__skill">Data Visualization</div>
+                  </div>
+                </div>
+                <div className="skills__group">
+                  <h4 className="skills__group-title">Testing &amp; Tools</h4>
+                  <div className="skills">
+                    <div className="skills__skill">Jest</div>
+                    <div className="skills__skill">Git</div>
+                    <div className="skills__skill">GitHub</div>
+                    <div className="skills__skill">Postman</div>
+                    <div className="skills__skill">Jira</div>
+                    <div className="skills__skill">CI/CD</div>
+                    <div className="skills__skill">Vercel</div>
+                  </div>
+                </div>
+                <div className="skills__group">
+                  <h4 className="skills__group-title">Backend &amp; AI (working knowledge)</h4>
+                  <div className="skills">
+                    <div className="skills__skill">Node.js</div>
+                    <div className="skills__skill">Express.js</div>
+                    <div className="skills__skill">MongoDB</div>
+                    <div className="skills__skill">JWT</div>
+                    <div className="skills__skill">OpenAI API</div>
+                    <div className="skills__skill">RAG</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Experience />
       <section id="projects" className="projects sec-pad">
           <Projects />
       </section>

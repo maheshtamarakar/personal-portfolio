@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState } from "react";
 import Image from "next/image";
+import useTheme from "../lib/useTheme";
 
 const Navbar = () => {
 
   const [active, setActive] = useState(false)
+  const { theme, toggleTheme, mounted } = useTheme();
 
   const handleHamMenu = () => {
     let isActive = active;
@@ -43,6 +45,11 @@ const Navbar = () => {
               </a>
             </li>
             <li className="header__link-wrapper">
+              <a href="/#experience" className="header__link">
+                Experience
+              </a>
+            </li>
+            <li className="header__link-wrapper">
               <a href="/#projects" className="header__link">
                 Projects
               </a>
@@ -54,6 +61,14 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="header__theme-toggle"
+            aria-label="Toggle dark and light theme"
+          >
+            {mounted && theme === "dark" ? "☀️" : "🌙"}
+          </button>
           <div onClick={handleHamMenu} className={`header__main-ham-menu-cont`}>
             <Image
               src="/ham-menu.svg"
@@ -83,6 +98,10 @@ const Navbar = () => {
 
             <li onClick={handleHamMenu} className="header__sm-menu-link">
               <a href="/#about"> About </a>
+            </li>
+
+            <li onClick={handleHamMenu} className="header__sm-menu-link">
+              <a href="/#experience"> Experience </a>
             </li>
 
             <li onClick={handleHamMenu} className="header__sm-menu-link">

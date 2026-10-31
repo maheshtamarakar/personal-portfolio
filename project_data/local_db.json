@@ -1,46 +1,207 @@
 {
   "project-1": {
-    "name": "E-Commerce Website",
-    "heading": "Angular E-Commerce Website: Development and Deploymen",
-    "liveLink": "https://animewear.netlify.app/",
-    "gitHubLink": "https://github.com/maheshtamarakar/E-COMM-APP",
-    "img": "/gifs/ecomm.gif",
+    "name": "AutoChat AI",
+    "type": "Personal Project",
+    "period": "2026",
+    "heading": "A multi-tenant WhatsApp AI customer support platform (MERN + OpenAI + RAG) where businesses upload their own knowledge documents and serve customers through tenant-specific vector stores.",
+    "gitHubLink": "https://github.com/maheshtamarakar/autochatai",
+    "backendLink": "https://github.com/maheshtamarakar/autochatai-api",
     "arrProjectOverview": [
-      "Developed an Angular E-Commerce website using Angular, Angular RxJS, Flask, SQL, Flask-SQLAlchemy, and Bootstrap, with a focus on creating a seamless user experience.",
-      "Implemented features such as seller accounts, product management, user login and signup, cart functionality, and search using RxJS.",
-      "Designed and implemented cart functionality, allowing users to add products to their cart without logging in and transferring the data to the user’s cart when logged in, providing a seamless user experience.",
-      "Created a user-friendly UI design and optimized the UX for ease of use and efficient navigation.",
-      "Utilized SQL, PostgreSQL, and pgAdmin for database management, ensuring reliable and secure data storage.",
-      "Feel free to check out the Project by visiting the Live Link."
+      "Engineered a multi-tenant WhatsApp AI support platform with a React frontend (repo: github.com/maheshtamarakar/autochatai) and a Node.js/Express API backend (repo: github.com/maheshtamarakar/autochatai-api).",
+      "Businesses upload knowledge documents and serve customers using OpenAI and Retrieval-Augmented Generation (RAG), with tenant-specific vector stores keeping each business's data isolated.",
+      "Secured the platform with JWT authentication, Zod request validation, rate limiting, and HMAC webhook verification for WhatsApp Cloud API callbacks.",
+      "Covered core flows with Jest/Supertest integration tests and deployed the stack on Vercel."
     ],
-    "skills": ["Angular", "Angular RxJS","Bootstrap", "Python", "Flask", "SQL", "Flask-SQLAlchemy", "GIT"]
+    "caseStudy": [
+      {
+        "title": "The Problem",
+        "body": [
+          "Small and mid-sized businesses increasingly run customer support over WhatsApp, but handling that volume manually doesn't scale, and generic chatbots can't answer questions grounded in a specific business's own documentation (pricing sheets, policies, product catalogs).",
+          "I wanted a platform where any business could plug in its own knowledge base and get an AI assistant on WhatsApp that only answers from that business's data — without businesses sharing data with each other."
+        ]
+      },
+      {
+        "title": "Approach & Architecture",
+        "body": [
+          "Built as a MERN application with two deployable services: a React frontend (dashboard for uploading documents, managing tenants, viewing conversations) and a Node.js/Express API that owns auth, document ingestion, and the WhatsApp Cloud API webhook.",
+          "Each tenant gets an isolated vector store built from its uploaded documents. Incoming WhatsApp messages are matched against that tenant's vectors only, then passed to OpenAI with the retrieved context (Retrieval-Augmented Generation) so answers stay grounded and tenant data never leaks across businesses.",
+          "Multi-tenancy is enforced at the data-access layer, not just the UI, so a bug in the frontend can't expose one business's knowledge base to another."
+        ]
+      },
+      {
+        "title": "Key Technical Decisions",
+        "body": [
+          "JWT authentication for dashboard access, with Zod schemas validating every API request body before it touches business logic.",
+          "HMAC signature verification on incoming WhatsApp Cloud API webhooks, so the backend only processes messages that genuinely originated from Meta's servers — not spoofed requests to an exposed public endpoint.",
+          "Rate limiting on the webhook and API routes to protect against both abuse and runaway OpenAI API costs from a single misbehaving tenant."
+        ]
+      },
+      {
+        "title": "Challenges & Solutions",
+        "body": [
+          "Keeping RAG responses fast enough for a chat UX while still retrieving from per-tenant vector stores required tuning retrieval scope (top-k chunks) rather than searching full documents on every message.",
+          "WhatsApp's webhook model means failures are easy to miss silently — Jest/Supertest integration tests around the webhook and auth flows catch regressions before they reach a real tenant's conversation."
+        ]
+      },
+      {
+        "title": "Outcome",
+        "body": [
+          "A deployed (Vercel), working multi-tenant platform demonstrating end-to-end ownership: frontend, backend API, third-party AI integration (OpenAI + RAG), a real external webhook integration (WhatsApp Cloud API), and security practices (JWT, HMAC, rate limiting, input validation) applied together in one system."
+        ]
+      }
+    ],
+    "skills": ["React", "Node.js", "Express.js", "OpenAI API", "RAG", "MongoDB", "JWT", "Jest"]
   },
   "project-2": {
-    "name": "ReactJS Expense Tracker",
-    "heading": "Efficient Expense Tracker: Track, Analyze, and Manage Your Finances with Ease",
-    "liveLink": "https://shimmering-sprite-67d8dc.netlify.app/",
-    "gitHubLink": "https://github.com/maheshtamarakar/Expense-Tracker",
-    "img": "/gifs/expenseTracker.gif",
+    "name": "Reusable Component Library & Design System",
+    "type": "Role Highlight",
+    "company": "Predigle India Pvt Ltd",
+    "period": "2022 – 2026",
+    "heading": "Led a 4-person team building a company-wide React component library with Storybook documentation and automated CI/CD, cutting duplicate UI code by 40%.",
     "arrProjectOverview": [
-      "I have developed an expense tracker using ReactJS that allows users to effortlessly track their expenses. With this application, users can easily enter the product name, price, and date of their expenses. The expenses are then categorized according to the respective years, providing a clear overview of spending patterns.",
-      "One of the key features of this expense tracker is the visually appealing months chart bar. This chart visually represents the percentage of expenses in each month, allowing users to quickly analyze and compare their spending habits across different months.",
-      "Overall, this expense tracker showcases my expertise in ReactJS and my ability to develop practical and user-centered applications.",
-      "Feel free to check out the Project by visiting the Live Link. "
+      "Led a 4-person team in building a company-wide React component library (tables, modals, sidebars, auto-complete) documented in Storybook for consistent adoption across teams.",
+      "Implemented GitHub Actions CI/CD pipelines for automated npm publishing, documentation updates, and QA-to-production workflows.",
+      "Cut duplicate UI code by 40% and improved design consistency, accessibility (WCAG), and cross-browser compatibility across the company's products.",
+      "This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "React", "GIT"]
+    "caseStudy": [
+      {
+        "title": "The Problem",
+        "body": [
+          "Every product team at Predigle was building its own version of the same tables, modals, sidebars, and auto-complete fields — each with slightly different behavior, inconsistent styling, and its own accessibility gaps. Shipping even a small UI change meant touching the same component in four different codebases.",
+          "New engineers had no single place to look up what components already existed, so duplication kept compounding."
+        ]
+      },
+      {
+        "title": "Approach & Architecture",
+        "body": [
+          "Led a 4-person team to build one versioned React component library, documented interactively in Storybook so any team could browse, copy, and adopt components without reading source code.",
+          "Built a Node.js-based tooling layer around the library: scripts that scaffold a new component with its test, story, and prop-types boilerplate, extract and generate prop documentation automatically from source, and run the semantic-versioning + changelog step before every release.",
+          "Wired the whole thing into GitHub Actions: on merge, Node.js build scripts lint, test, build, version-bump, and publish the package to the internal npm registry, then regenerate and deploy the Storybook docs site automatically — no manual publish step for any contributor."
+        ]
+      },
+      {
+        "title": "Key Technical Decisions",
+        "body": [
+          "Treated accessibility (WCAG) as a build gate, not a nice-to-have: automated checks in the CI pipeline could fail a build if a component shipped without proper ARIA attributes or keyboard support.",
+          "Kept the library framework-agnostic at the styling layer so consuming teams could theme components rather than fork them, which is what made company-wide adoption realistic."
+        ]
+      },
+      {
+        "title": "Challenges & Solutions",
+        "body": [
+          "The hardest part wasn't writing the components, it was getting four already-shipping teams to migrate off their own versions. We prioritized the highest-duplication components first (tables and modals) and kept the Storybook docs good enough that adopting the shared version was less work than maintaining a local one.",
+          "Automated release tooling in Node.js removed the biggest adoption blocker: teams didn't trust a library that required a manual, error-prone publish process, so making releases a push-button CI step changed that."
+        ]
+      },
+      {
+        "title": "Outcome",
+        "body": [
+          "Cut duplicate UI code by 40% across the company's products, with measurably better design consistency, accessibility, and cross-browser compatibility. This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
+        ]
+      }
+    ],
+    "skills": ["React", "Storybook", "GitHub Actions", "CI/CD", "Accessibility (WCAG)"]
   },
   "project-3": {
-    "name": "Live Dinner Restaurant",
-    "heading": "A responsive LiveDinnerRestaurant website to test my HTML5, CSS3, JavaScript",
-    "liveLink": "https://maheshtamarakar.github.io/liverestaurant1/",
-    "gitHubLink": "https://github.com/maheshtamarakar/liverestaurant1",
-    "img": "/food_restaurant.png",
+    "name": "Health Analytics Dashboard",
+    "type": "Role Highlight",
+    "company": "Predigle India Pvt Ltd",
+    "period": "2022 – 2026",
+    "heading": "Frontend for a health analytics dashboard with multi-graph visualizations, reusable filters, and a Gantt-based patient insights module with PDC scoring.",
     "arrProjectOverview": [
-      "Built a simple and intuitive TodoList app using React.js, allowing users to easily add daily tasks that are stored in localStorage for convenient access.",
-      "Implemented essential functionality such as editing, deleting, and deleting all tasks, enabling users to manage their daily tasks with ease.",
-      "Demonstrated strong problem-solving skills by overcoming technical challenges such as efficiently managing localStorage, ensuring the smooth performance of the app.",
-      "Feel free to check out the Project by visiting the Live Link. "
+      "Developed the frontend for a health analytics dashboard featuring multi-graph visualizations and reusable filter components for exploring patient data.",
+      "Built a Gantt-based patient insights module with PDC (Proportion of Days Covered) scoring to help clinicians track medication adherence over time.",
+      "Used Redux-driven data flows, performance optimizations, and accessibility improvements to keep the dashboard responsive with large datasets.",
+      "This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
     ],
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "caseStudy": [
+      {
+        "title": "The Problem",
+        "body": [
+          "Clinicians needed a single view across multiple graph types (adherence trends, visit history, medication timelines) plus a patient-by-patient medication adherence score (PDC), but the underlying patient datasets were large enough that computing and re-rendering everything on the client made the dashboard sluggish and the Gantt view janky when scrolling."
+        ]
+      },
+      {
+        "title": "Approach & Architecture",
+        "body": [
+          "Built the frontend in React with Redux owning the shared data flow between the filters, graphs, and the Gantt-based patient insights module, so changing a filter updated every view from one source of truth instead of each chart re-fetching independently.",
+          "Pushed the expensive part — computing PDC (Proportion of Days Covered) scores and shaping raw medication records into chart-ready series — onto Node.js/Express API endpoints rather than recomputing it in the browser on every render. The backend aggregated and paginated large patient datasets before they ever reached the client.",
+          "Memoized chart-data selectors on the frontend so switching filters didn't force every graph to recompute from scratch when only one dataset had changed."
+        ]
+      },
+      {
+        "title": "Key Technical Decisions",
+        "body": [
+          "Moved PDC scoring server-side (Node.js) specifically because it needed to be consistent across every view that displayed it — computing it independently in multiple frontend components had already caused the inconsistent-number issues the rebuild was meant to fix.",
+          "Used server-side pagination for the Gantt module instead of loading a patient's full history client-side, which was the main fix for the scroll jank with large datasets."
+        ]
+      },
+      {
+        "title": "Challenges & Solutions",
+        "body": [
+          "The Gantt view in particular struggled with large patient histories until data was paginated and virtualized rather than rendered in full; combined with server-computed aggregates, this brought the dashboard back to a responsive state on the largest accounts.",
+          "Balancing accessibility (keyboard navigation and screen-reader labeling across dense chart UI) with information density took several passes with real clinician feedback."
+        ]
+      },
+      {
+        "title": "Outcome",
+        "body": [
+          "A responsive, accessible analytics dashboard that clinicians use to track medication adherence at a glance, with consistent PDC scoring computed once on the backend instead of drifting across views. This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
+        ]
+      }
+    ],
+    "skills": ["React", "Redux", "Node.js", "Express.js", "Data Visualization", "Performance Optimization"]
+  },
+  "project-4": {
+    "name": "Patient Onboarding Portal",
+    "type": "Role Highlight",
+    "company": "Predigle India Pvt Ltd",
+    "period": "2022 – 2026",
+    "heading": "A responsive, multi-step patient onboarding portal with document handling, session resume, an AI chatbot for patient queries, and an admin progress dashboard.",
+    "arrProjectOverview": [
+      "Delivered a responsive patient onboarding portal built around multi-step forms that guide patients through registration and document submission.",
+      "Implemented document handling and session resume so patients could pick up an in-progress onboarding flow without losing data.",
+      "Added an AI chatbot to the onboarding flow so patients could get instant answers to common onboarding questions instead of waiting on staff.",
+      "Built an admin progress dashboard giving staff visibility into where each patient stood in the onboarding pipeline.",
+      "This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
+    ],
+    "caseStudy": [
+      {
+        "title": "The Problem",
+        "body": [
+          "Patients onboarding into the system had to work through registration, document uploads, and verification steps, and most of their questions along the way (\"which document do I need here?\", \"why was my upload rejected?\", \"can I finish this later?\") were simple and repetitive — but staff weren't available around the clock to answer them, and unanswered confusion was causing patients to abandon onboarding partway through."
+        ]
+      },
+      {
+        "title": "Approach & Architecture",
+        "body": [
+          "Built the multi-step form flow in React, with a Node.js/Express backend owning session state, document storage, and step validation, so a patient could close the browser mid-flow and resume exactly where they left off (session resume) instead of starting over.",
+          "Added an AI chatbot directly inside the onboarding flow to handle exactly the queries patients were asking in context — required documents for the current step, upload-rejection reasons, and general process questions — backed by a Node.js service that scoped the assistant's answers to onboarding FAQ content rather than letting it improvise.",
+          "Built an admin dashboard (also served by the same Node.js/Express API) giving staff a live view of where every patient stood in the pipeline, so a human could step in on any case the chatbot couldn't resolve."
+        ]
+      },
+      {
+        "title": "Key Technical Decisions",
+        "body": [
+          "Deliberately scoped the chatbot to onboarding-process questions only — not medical advice — both for patient safety and because that's the problem it was actually built to solve; anything outside that scope was handed off to staff instead of being answered by the model.",
+          "Persisted session and document-upload state server-side (Node.js) rather than in the browser, since patients onboarding from a phone would frequently switch devices or lose connectivity mid-flow."
+        ]
+      },
+      {
+        "title": "Challenges & Solutions",
+        "body": [
+          "Keeping the chatbot's answers grounded in the actual onboarding requirements (which varied by document type and step) meant feeding it the relevant step's context rather than a single static FAQ list — this cut down on generic, unhelpful responses.",
+          "Session resume across devices required the backend, not the browser, to be the source of truth for onboarding progress, which also made the admin dashboard's real-time view of patient status straightforward to build on top of the same data."
+        ]
+      },
+      {
+        "title": "Outcome",
+        "body": [
+          "Reduced patient confusion and drop-off during onboarding, freed staff from answering the same repetitive questions by routing them to the chatbot first, and gave the admin team live visibility into the pipeline. This was internal work built for Predigle India Pvt Ltd, so there is no public repository or live demo to link to."
+        ]
+      }
+    ],
+    "skills": ["React", "Node.js", "Express.js", "REST APIs", "AI Chatbot", "Accessibility"]
   }
 }

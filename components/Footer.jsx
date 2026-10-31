@@ -11,7 +11,7 @@ const Footer = () => {
               <span>Social</span>
             </h2>
             <div className="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mahesh-tamrakar-7095951b7/">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mahesh-tamatta-7095951b7/">
                 <Image
                   src="/linkedin-ico.png"
                   alt="icon"
@@ -56,12 +56,15 @@ const Footer = () => {
           <div className="main-footer__row main-footer__row-2">
             <h4 className="heading heading-sm text-lt">Mahesh Tamatta</h4>
             <p className="main-footer__short-desc">
-            Full Stack Developer Specializing in Frontend Development for Successful Websites and Web Applications
+              Frontend Developer (React.js, TypeScript, Redux) with 4.6 years
+              of experience building production web applications across
+              fintech, healthcare and e-commerce. B.E. Mechanical Engineering,
+              Terna Engineering College (2018&ndash;2022).
             </p>
           </div>
         </div>
         <div className="main-footer__lower">
-          &copy; Copyright 2021. Made by Mahesh Tamatta
+          &copy; Copyright {new Date().getFullYear()}. Made by Mahesh Tamatta
         </div>
       </div>
     </footer>
