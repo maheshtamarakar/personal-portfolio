@@ -270,6 +270,17 @@ textarea {
 .home-hero__resume-btn {
   margin-left: 1.5rem;
 }
+/* .home-hero keeps a fixed blue gradient in both themes (see .home-hero
+   below), so its buttons must use fixed brand colors too, not the
+   light/dark --bg/--accent tokens - otherwise the Resume button (which used
+   .btn--theme-inv) would flip to a near-black pill in dark mode next to the
+   Projects button, which always stays white, making the hero look broken
+   when dark mode is on. */
+.home-hero .btn--theme-inv {
+  background: #fff;
+  color: #0062b9;
+  border-color: #fff;
+}
 @media only screen and (max-width: 37.5em) {
   .home-hero__cta {
     display: flex;
