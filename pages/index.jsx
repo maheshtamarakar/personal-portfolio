@@ -92,7 +92,7 @@ export default function Home() {
             <a href="./#projects" className="btn btn--bg">
               Projects
             </a>
-            <a href="/resume.pdf" download className="btn btn--bg btn--theme-inv home-hero__resume-btn">
+            <a href="/Mahesh_Tamatta_Frontend_Developer_Resume.pdf" download className="btn btn--bg btn--theme-inv home-hero__resume-btn">
               Download Resume
             </a>
           </div>
